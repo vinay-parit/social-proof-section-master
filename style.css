@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+/* -----------mar&pad-------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", serif;
+}
+/* ------------root------------ */
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+/* ------------body------------- */
+body {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/bg-pattern-top-desktop.svg);
+  background-repeat: no-repeat;
+/* ----------------main------------- */
+  main {
+    height: 100vh;
+    width: 80vw;
+  }
+  /* --------------first heading-------------- */
+  .heading {
+    color: var(--Very-Dark-Magenta);
+    font-size: 2.5rem;
+    font-weight: 700px;
+  }
+
+  /* ----------------rate-space------------*/
+  .space {
+    position: relative;
+    left: 15px;
+    color: var(--Very-Dark-Magenta);
+  }
+  /* ---------------first p--------------- */
+  .para {
+    color: var(--Dark-Grayish-Magenta);
+    margin-top: 1rem;
+  }
+  /* ---------------parent of products & boxes------------- */
+  .design {
+    display: flex;
+    width: 100%;
+    
+    margin-top: 2rem;
+    
+  }
+}
+.products {
+  width: 50%;
+}
+
+.rate {
+  display: flex;
+  width: 50%;
+  position: relative;
+  background-image: url(/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+/* --------------image---------------- */
+img {
+  height: 10px;
+  width: 10px;
+}
+/* --------------rate------------ */
+.rating1,
+.rating2,
+.rating3 {
+  display: flex;
+  background-color: var(--Light-Grayish-Magenta);
+  
+  border-radius: 5px;
+  width: 65%;
+  align-items: center;
+  justify-content: center;
+}
+.rating1 {
+  position: absolute;
+  top: 30px;
+  height: 2rem;
+  left: 2rem;
+}
+.rating2 {
+  position: absolute;
+  top: 5rem;
+  right: 4.5rem;
+  height: 2rem;
+  width: 70%;
+ 
+}
+.rating3 {
+  position: absolute;
+  top: 8rem;
+  right: 4rem;
+  height: 2rem;
+}
+/* -------------parent ofbox----------- */
+.boxes {
+  display: flex;
+  
+  gap: 2rem;
+  
+  margin-top: 3rem;
+}
+.box1,
+.box2,
+.box3 {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--White);
+  height: 200px;
+  width: 500px;
+  border-radius: 10px;
+}
+.gap > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+.gap {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+}
+.comment > h4 {
+  margin-top: 0.3rem;
+}
+.comment > p {
+  color: var(--Soft-Pink);
+  font-size: 1rem;
+}
+.box2 {
+  margin-top: 1rem;
+}
+.box3 {
+  margin-top: 2rem;
+}
+
+.box1 > p,
+.box2 > p,
+.box3 > p {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+/* -----------------media-------------- */
+@media (max-width: 375px) {
+  body {
+    background-image: url(/images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+   
+    background-position: top;
+  }
+
+  
+  .products {
+    
+    flex-direction: column;
+    
+    font-size: 20px;
+   
+  }
+  .heading{
+    width: 340px;
+  }
+  .para{
+    width: 300px;
+   
+    padding-left: 0 !important;
+  }
+  .rate{
+    background: none;
+  }
+
+ /* -----------------rate---------------*/
+  .rating1 {
+    /* display: flex; */
+    flex-direction: column;
+    top: 250px;
+    left: -9rem;
+    width: 300px;
+    height: 3rem;
+  }
+  .rating2 {
+    flex-direction: column;
+    top: 310px;
+    left: -9rem;
+    width: 300px;
+    height: 3rem;
+  }
+  .rating3 {
+    flex-direction: column;
+    top: 370px;
+    left: -9rem;
+    width: 300px;
+    height: 3rem;
+  }
+  /* -----------------boxes-------------- */
+  .boxes {
+    flex-direction: column;
+  }
+  .box1 {
+    margin-top: 12rem;
+  }
+  .box3{
+    margin-top: 1rem;
+    margin-bottom: 2REM;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    height: 200px;
+    width: 300px;
+  }
+  .box1 > p,
+  .box2 > p,
+  .box3 > p {
+    font-size: 1.1rem;
+  }
+}
